@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class tambahBukuScreen extends StatelessWidget {
-  const new({super.key});
+class BayarDendaScreen extends StatelessWidget {
+  const BayarDendaScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tambah Buku'),
+        title: const Text('Bayar Denda'),
       ),
       body: const Center(
-        child: Text('Ini adalah halaman Tambah Buku'),
+        child: Text('Ini adalah halaman Bayar Denda'),
       ),
     );
   }

@@ -1,4 +1,15 @@
 import 'package:flutter/material.dart';
+import 'daftarBukuScreen.dart';
+import 'scanISBNScreen.dart';
+import 'kartuAnggotaScreen.dart';
+import 'riwayatPeminjamanScreen.dart';
+import 'eBookScreen.dart';
+import 'audioBookScreen.dart';
+import 'jurnalIlmiahScreen.dart';
+import 'bukuBaruScreen.dart';
+import 'bayarDendaScreen.dart';
+import 'sumbangBukuScreen.dart';
+import 'bookingRuanganScreen.dart';
 
 class menuScreen extends StatelessWidget {
   const menuScreen({super.key});
@@ -37,18 +48,28 @@ class menuScreen extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Container(
-                      width: 65,
-                      height: 65,
-                      decoration: BoxDecoration(
-                        color: Colors.blue.shade50,
-                        borderRadius: BorderRadius.circular(20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const daftarBukuScreen(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 65,
+                        height: 65,
+                        decoration: BoxDecoration(
+                          color: Colors.blue.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          Icons.library_books,
+                          color: Colors.blue.shade700,
+                          size: 40,
+                        )
                       ),
-                      child: Icon(
-                        Icons.library_books,
-                        color: Colors.blue.shade700,
-                        size: 40,
-                      )
                     ),
                     const SizedBox(height: 5),
                     SizedBox(
@@ -63,18 +84,28 @@ class menuScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Container(
-                      width: 65,
-                      height: 65,
-                      decoration: BoxDecoration(
-                        color: Colors.orange.shade50,
-                        borderRadius: BorderRadius.circular(20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ScanISBNScreen(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 65,
+                        height: 65,
+                        decoration: BoxDecoration(
+                          color: Colors.orange.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          Icons.qr_code,
+                          color: Colors.orange.shade700,
+                          size: 40,
+                        )
                       ),
-                      child: Icon(
-                        Icons.qr_code,
-                        color: Colors.orange.shade700,
-                        size: 40,
-                      )
                     ),
                     const SizedBox(height: 5),
                     SizedBox(
@@ -89,18 +120,28 @@ class menuScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Container(
-                      width: 65,
-                      height: 65,
-                      decoration: BoxDecoration(
-                        color: Colors.green.shade50,
-                        borderRadius: BorderRadius.circular(20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const KartuAnggotaScreen(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 65,
+                        height: 65,
+                        decoration: BoxDecoration(
+                          color: Colors.green.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          Icons.badge,
+                          color: Colors.green.shade700,
+                          size: 40,
+                        )
                       ),
-                      child: Icon(
-                        Icons.badge,
-                        color: Colors.green.shade700,
-                        size: 40,
-                      )
                     ),
                     const SizedBox(height: 5),
                     SizedBox(
@@ -115,18 +156,28 @@ class menuScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Container(
-                      width: 65,
-                      height: 65,
-                      decoration: BoxDecoration(
-                        color: Colors.purple.shade50,
-                        borderRadius: BorderRadius.circular(20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const RiwayatPeminjamanScreen(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 65,
+                        height: 65,
+                        decoration: BoxDecoration(
+                          color: Colors.purple.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          Icons.history,
+                          color: Colors.purple.shade700,
+                          size: 40,
+                        )
                       ),
-                      child: Icon(
-                        Icons.history,
-                        color: Colors.purple.shade700,
-                        size: 40,
-                      )
                     ),
                     const SizedBox(height: 5),
                     SizedBox(
@@ -149,24 +200,34 @@ class menuScreen extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Container(
-                      width: 65,
-                      height: 65,
-                      decoration: BoxDecoration(
-                        color: Colors.red.shade50,
-                        borderRadius: BorderRadius.circular(20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const EbookScreen(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 65,
+                        height: 65,
+                        decoration: BoxDecoration(
+                          color: Colors.red.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          Icons.tablet_mac,
+                          color: Colors.red.shade700,
+                          size: 40,
+                        )
                       ),
-                      child: Icon(
-                        Icons.tablet_mac,
-                        color: Colors.red.shade700,
-                        size: 40,
-                      )
                     ),
                     const SizedBox(height: 5),
                     SizedBox(
                       width: 75,
                       child: Text(
-                        'E-book',
+                        'Riwayat Peminjaman',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 12),
                       ),
@@ -175,18 +236,29 @@ class menuScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Container(
-                      width: 65,
-                      height: 65,
-                      decoration: BoxDecoration(
-                        color: Colors.teal.shade50,
-                        borderRadius: BorderRadius.circular(20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const AudiobookScreen(),
+                          ),
+                        );
+                      },
+                      child:
+                      Container(
+                        width: 65,
+                        height: 65,
+                        decoration: BoxDecoration(
+                          color: Colors.teal.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          Icons.headphones,
+                          color: Colors.teal.shade700,
+                          size: 40,
+                        )
                       ),
-                      child: Icon(
-                        Icons.headphones,
-                        color: Colors.teal.shade700,
-                        size: 40,
-                      )
                     ),
                     const SizedBox(height: 5),
                     SizedBox(
@@ -201,18 +273,28 @@ class menuScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Container(
-                      width: 65,
-                      height: 65,
-                      decoration: BoxDecoration(
-                        color: Colors.indigo.shade50,
-                        borderRadius: BorderRadius.circular(20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const JurnalIlmiahScreen(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 65,
+                        height: 65,
+                        decoration: BoxDecoration(
+                          color: Colors.indigo.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          Icons.article,
+                          color: Colors.indigo.shade700,
+                          size: 40,
+                        )
                       ),
-                      child: Icon(
-                        Icons.article,
-                        color: Colors.indigo.shade700,
-                        size: 40,
-                      )
                     ),
                     const SizedBox(height: 5),
                     SizedBox(
@@ -227,18 +309,28 @@ class menuScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Container(
-                      width: 65,
-                      height: 65,
-                      decoration: BoxDecoration(
-                        color: Colors.amber.shade50,
-                        borderRadius: BorderRadius.circular(20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const BukuBaruScreen(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 65,
+                        height: 65,
+                        decoration: BoxDecoration(
+                          color: Colors.amber.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          Icons.new_releases,
+                          color: Colors.amber.shade800,
+                          size: 40,
+                        )
                       ),
-                      child: Icon(
-                        Icons.new_releases,
-                        color: Colors.amber.shade800,
-                        size: 40,
-                      )
                     ),
                     const SizedBox(height: 5),
                     SizedBox(
@@ -261,18 +353,28 @@ class menuScreen extends StatelessWidget {
               children: [
                 Column(
                   children: [
-                    Container(
-                      width: 65,
-                      height: 65,
-                      decoration: BoxDecoration(
-                        color: Colors.deepOrange.shade50,
-                        borderRadius: BorderRadius.circular(20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const BayarDendaScreen(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: 65,
+                        height: 65,
+                        decoration: BoxDecoration(
+                          color: Colors.deepOrange.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          Icons.payment,
+                          color: Colors.deepOrange.shade700,
+                          size: 40,
+                        )
                       ),
-                      child: Icon(
-                        Icons.payment,
-                        color: Colors.deepOrange.shade700,
-                        size: 40,
-                      )
                     ),
                     const SizedBox(height: 5),
                     SizedBox(
@@ -287,18 +389,29 @@ class menuScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Container(
-                      width: 65,
-                      height: 65,
-                      decoration: BoxDecoration(
-                        color: Colors.pink.shade50,
-                        borderRadius: BorderRadius.circular(20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SumbangBukuScreen(),
+                          ),
+                        );
+                      },
+                      child:
+                      Container(
+                        width: 65,
+                        height: 65,
+                        decoration: BoxDecoration(
+                          color: Colors.pink.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          Icons.volunteer_activism,
+                          color: Colors.pink.shade700,
+                          size: 40,
+                        )
                       ),
-                      child: Icon(
-                        Icons.volunteer_activism,
-                        color: Colors.pink.shade700,
-                        size: 40,
-                      )
                     ),
                     const SizedBox(height: 5),
                     SizedBox(
@@ -313,18 +426,29 @@ class menuScreen extends StatelessWidget {
                 ),
                 Column(
                   children: [
-                    Container(
-                      width: 65,
-                      height: 65,
-                      decoration: BoxDecoration(
-                        color: Colors.cyan.shade50,
-                        borderRadius: BorderRadius.circular(20),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const BookingRuanganScreen(),
+                          ),
+                        );
+                      },
+                      child:
+                      Container(
+                        width: 65,
+                        height: 65,
+                        decoration: BoxDecoration(
+                          color: Colors.cyan.shade50,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Icon(
+                          Icons.meeting_room,
+                          color: Colors.cyan.shade700,
+                          size: 40,
+                        )
                       ),
-                      child: Icon(
-                        Icons.meeting_room,
-                        color: Colors.cyan.shade700,
-                        size: 40,
-                      )
                     ),
                     const SizedBox(height: 5),
                     SizedBox(
